@@ -1,10 +1,4 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
@@ -12,5 +6,14 @@ module.exports = {
     title: 'blog',
     description: 'Ramblings of Jakob Serlier',
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`, // This should point to the directory where your markdown files are located.
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 }
