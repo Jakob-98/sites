@@ -1,0 +1,20 @@
+.header {
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+}
+
+.siteTitle {
+  margin: 0;
+  font-size: 2em;
+  color: #333;
+}
+
+.navLink {
+  margin-right: 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #0077cc;
+}

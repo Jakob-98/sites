@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --background-color: #fff;
+  --primary-text-color: #333;
+  --secondary-text-color: #777;
+  --link-color: #0077cc;
+  --link-hover-color: #005999;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-text-color);
+  font-family: 'Fira Code', monospace;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-post-content {
+  font-family: 'IM Fell English', Helvetica, Arial, sans-serif;
+}
+
+/* For mobile styles */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* For desktop styles */
+@media (min-width: 601px) {
+  body {
+    font-size: 20px;
+  }
+}
