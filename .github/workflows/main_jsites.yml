@@ -23,8 +23,6 @@ jobs:
           cd backend
           pip install -r requirements.txt
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-      
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
@@ -53,4 +51,3 @@ jobs:
           slot-name: 'production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FCA8F0C292AD4DF08FFCE1D0F6D25450 }}
           package: backend
-          startup-command: 'gunicorn --bind=0.0.0.0 --timeout 600 backend/app:app'
