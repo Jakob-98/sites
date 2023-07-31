@@ -1,26 +1,62 @@
-/* pinnedrepos.module.css */
-
 .repoCard {
-    /* background-color: #f6f8fa; */
-    border-color: #e1e4e8;
+    background-color: var(--background-color);
+    border-color: var(--secondary-text-color);
     border-radius: 6px;
     border-style: solid;
     border-width: 1px;
     display: flex;
-    flex-direction: column;
     padding: 16px;
     margin-bottom: 16px;
-    width: 100%;
-    max-width: 300px;
-    max-height: 300px;
     box-sizing: border-box;
+    width: 400px;
+    height: 150px;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
 .repoCard a {
-    font-size: 1.5rem;
-    color: #0366d6; /* adjust this to your preferred color */
+    font-size: 1rem;
+    font-style: bold;
+    color: var(--link-color);
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
 }
+
+.repoCard a:hover {
+    color: var(--link-hover-color);
+}
+
 .repoCard p {
     margin: 8px 0;
-    overflow: scroll;
+}
+
+.repoDescription {
+    font-size: 0.7em;
+    color: var(--secondary-text-color);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 40%;
+    text-align: left;
+}
+
+.repoStats {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.languageBubble {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.icon {
+    margin-left: 10px;
 }
