@@ -1,0 +1,26 @@
+/* pinnedrepos.module.css */
+
+.repoCard {
+    /* background-color: #f6f8fa; */
+    border-color: #e1e4e8;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    box-sizing: border-box;
+}
+.repoCard a {
+    font-size: 1.5rem;
+    color: #0366d6; /* adjust this to your preferred color */
+    text-decoration: none;
+}
+.repoCard p {
+    margin: 8px 0;
+    overflow: scroll;
+}

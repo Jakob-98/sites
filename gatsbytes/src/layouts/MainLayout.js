@@ -8,7 +8,9 @@ const MainLayout = ({ children }) => {
   return (
     <div>
       <Header />
+      <div className='content-center'>
       {children}
+      </div>
       <Footer />
     </div>
   )
