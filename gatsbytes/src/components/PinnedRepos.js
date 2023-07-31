@@ -20,6 +20,8 @@ const truncateDescription = (description, maxLength) => {
     return `${description.substring(0, maxLength)}...`;
 }
 
+console.log(process.env.GATSBY_FLASK_BACKEND_URL);
+
 const PinnedRepos = () => {
     const [repos, setRepos] = useState([]);
 
@@ -28,50 +30,19 @@ const PinnedRepos = () => {
     }, []);
 
     async function fetchPinnedRepos() {
-        const query = `
-      query {
-        viewer {
-          pinnedItems(first: 6, types: [REPOSITORY]) {
-            nodes {
-              ... on Repository {
-                id
-                name
-                url
-                description
-                stargazerCount
-                forkCount
-                primaryLanguage {
-                    name
-                }
-              }
-            }
-          }
-        }
-      }`;
-
-        const url = 'https://api.github.com/graphql';
-        const headers = {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
-        };
-
+        const url = `${process.env.GATSBY_FLASK_BACKEND_URL}/githubdata`;
 
         try {
-            const result = await axios({
-                url,
-                method: 'post',
-                headers,
-                data: {
-                    query,
-                },
-            });
+            const result = await axios.get(url);
 
+            // Assumes your Flask backend returns the JSON response from the GitHub GraphQL API
             return result.data.data.viewer.pinnedItems.nodes;
 
         } catch (error) {
             console.error(error);
         }
     }
+
     return (
         <div>
             {repos && repos.length > 0 && <h2>Repos</h2>}
