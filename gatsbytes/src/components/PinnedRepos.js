@@ -74,13 +74,13 @@ const PinnedRepos = () => {
     }
     return (
         <div>
-            <h2>Pinned Repositories</h2>
+            {repos && repos.length > 0 && <h2>Repos</h2>}
             {repos && repos.length > 0 && repos.map((repo) => (
                 <div key={repo.id} className={styles.repoCard}>
                     <a href={repo.url} target="_blank" rel="noopener noreferrer">
                         <AiFillBook className={styles.icon}/> {repo.name}
                     </a>
-                    <p className={styles.repoDescription}>{truncateDescription(repo.description, 100)}</p>
+                    <p className={styles.repoDescription}>{truncateDescription(repo.description, 90)}</p>
                     <div className={styles.repoStats}>
                         <span 
                             className={styles.languageBubble} 

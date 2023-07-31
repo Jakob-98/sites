@@ -6,21 +6,28 @@ import PinnedRepos from '../components/PinnedRepos'
 const HomePage = ({ data }) => {
   return (
     <MainLayout>
-      <h2>Home</h2>
-      <p>This is the home page.</p>
-      <h2>Posts</h2>
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
-          <Link to={post.node.frontmatter.path}>
-             * {post.node.frontmatter.date} - {post.node.frontmatter.title}
-          </Link>
+      <div className="content-wrapper">
+        <div className="main-content">
+          <h2>Home</h2>
+          <p>This is the home page.</p>
+          <h2>Posts</h2>
+          {data.allMarkdownRemark.edges.map(post => (
+            <div key={post.node.id}>
+              <Link to={post.node.frontmatter.path}>
+                * {post.node.frontmatter.date} - {post.node.frontmatter.title}
+              </Link>
+            </div>
+          ))}
+        <h2>Projects</h2>
         </div>
-      ))}
-      <h2>Projects</h2>
-      <PinnedRepos/>
+        <div className="side-content">
+          <PinnedRepos/>
+        </div>
+      </div>
     </MainLayout>
   )
 }
+
 
 export const query = graphql`
   query HomepageQuery {

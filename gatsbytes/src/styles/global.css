@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
-:root {
+/* :root {
   --background-color: #fff;
   --primary-text-color: #333;
   --secondary-text-color: #777;
   --link-color: #0077cc;
   --link-hover-color: #005999;
+} */
+
+:root {
+  --background-color: #222; /* dark gray for background */
+  --primary-text-color: #eee; /* light color for primary text */
+  --secondary-text-color: #aaa; /* slightly darker color for secondary text */
+  --link-color: #1e90ff; /* a bright blue for links */
+  --link-hover-color: #63a4ff; /* a lighter blue for hover effects on links */
 }
+
 
 * {
   box-sizing: border-box;
@@ -51,13 +60,44 @@ img {
   font-family: 'IM Fell English', Helvetica, Arial, sans-serif;
 }
 
-/* For mobile styles */
-@media (max-width: 600px) {
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.side-content {
+  flex: 0 0 400px;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+@media (max-width: 800px) {
   body {
     font-size: 18px;
   }
-}
 
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content,
+  .side-content {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 /* For desktop styles */
 @media (min-width: 601px) {
   body {
