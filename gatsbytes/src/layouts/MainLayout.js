@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
       <div className='content-center'>
       {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

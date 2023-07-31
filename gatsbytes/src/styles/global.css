@@ -62,22 +62,23 @@ img {
 
 .content-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center; /* centralizes children horizontally */
+  align-items: flex-start; /* aligns children at the top */
+  padding: 0.5em; /* apply padding here instead of main and side content */
   width: 100%;
-  justify-content: space-between;
 }
 
 .main-content {
   flex: 1 0 auto;
-  margin: 0.5em;
-  padding: 0.5em;
+  max-width: 600px; /* your specification */
+  text-align: left; /* your specification */
+  min-height: 70vh;
 }
 
 .side-content {
   flex: 0 0 400px;
-  margin: 0.5em;
-  padding: 0.5em;
 }
+
 
 @media (max-width: 800px) {
   body {

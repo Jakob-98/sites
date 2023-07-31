@@ -1,6 +1,7 @@
 .header {
   background-color: var(--background-color);
   padding: 10px 20px;
+  display: flex;
 }
 
 .siteTitle {

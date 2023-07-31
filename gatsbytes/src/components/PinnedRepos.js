@@ -45,7 +45,7 @@ const PinnedRepos = () => {
 
     return (
         <div>
-            {repos && repos.length > 0 && <h2>Repos</h2>}
+            {repos && repos.length > 0 && <h2>Pinned repos</h2>}
             {repos && repos.length > 0 && repos.map((repo) => (
                 <div key={repo.id} className={styles.repoCard}>
                     <a href={repo.url} target="_blank" rel="noopener noreferrer">

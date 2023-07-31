@@ -8,6 +8,7 @@ const HomePage = ({ data }) => {
     <MainLayout>
       <div className="content-wrapper">
         <div className="main-content">
+          <h2>Jakob</h2>
           <h2>Home</h2>
           <p>This is the home page.</p>
           <h2>Posts</h2>
@@ -18,7 +19,7 @@ const HomePage = ({ data }) => {
               </Link>
             </div>
           ))}
-        <h2>Projects</h2>
+        <h2>Links</h2>
         </div>
         <div className="side-content">
           <PinnedRepos/>
