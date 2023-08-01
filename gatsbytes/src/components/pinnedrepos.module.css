@@ -40,6 +40,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     text-align: left;
+    vertical-align: top;
     max-height: 40%;
 }
 

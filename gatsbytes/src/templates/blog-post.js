@@ -13,9 +13,11 @@ export default function BlogPost({ data }) {
 
   return (
     <MainLayout>
-      <h2>{frontmatter.title}</h2>
-      <h4>{frontmatter.date}</h4>
-      <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="main-content">
+        <h2>{frontmatter.title}</h2>
+        <h4>{frontmatter.date}</h4>
+        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
     </MainLayout>
   )
 }

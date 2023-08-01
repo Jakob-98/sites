@@ -10,7 +10,7 @@ const HomePage = ({ data }) => {
         <div className="main-content">
           <h2>Jakob</h2>
           <h2>Home</h2>
-          <p>This is the home page.</p>
+          <p>This is my homepage. There are many like it, but this one is mine.</p>
           <h2>Posts</h2>
           {data.allMarkdownRemark.edges.map(post => (
             <div key={post.node.id}>
