@@ -10,11 +10,26 @@
 } */
 
 :root {
-  --background-color: #222; /* dark gray for background */
-  --primary-text-color: #eee; /* light color for primary text */
-  --secondary-text-color: #aaa; /* slightly darker color for secondary text */
-  --link-color: #1e90ff; /* a bright blue for links */
-  --link-hover-color: #63a4ff; /* a lighter blue for hover effects on links */
+  /* dark theme */
+  --background-color-dark: #222;
+  --primary-text-color-dark: #eee;
+  --secondary-text-color-dark: #aaa;
+  --link-color-dark: #1e90ff;
+  --link-hover-color-dark: #63a4ff;
+
+  /* light theme */
+  --background-color-light: #fff;
+  --primary-text-color-light: #333;
+  --secondary-text-color-light: #666;
+  --link-color-light: #0000ee;
+  --link-hover-color-light: #0000ff;
+
+  /* default to dark theme */
+  --background-color: var(--background-color-dark);
+  --primary-text-color: var(--primary-text-color-dark);
+  --secondary-text-color: var(--secondary-text-color-dark);
+  --link-color: var(--link-color-dark);
+  --link-hover-color: var(--link-hover-color-dark);
 }
 
 

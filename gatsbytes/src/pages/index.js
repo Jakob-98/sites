@@ -2,6 +2,8 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import MainLayout from '../layouts/MainLayout'
 import PinnedRepos from '../components/PinnedRepos'
+// import ScreenshotCard from '../components/ScreenshotCard';
+
 
 const HomePage = ({ data }) => {
   return (
