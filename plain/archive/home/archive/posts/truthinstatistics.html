@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Serlier - Finding truth in statistics</title>
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script> 
+  $(function(){
+    $("#header").load("../header.html"); 
+    $("#footer").load("../footer.html"); 
+  });
+  </script> 
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="../css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <div id="header"></div>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('media/truth0.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Finding truth in statistics</h1>
+            <h2 class="subheading">A case study of sex discrimination in UC Berkeley's admittance rates</h2>
+            <span class="meta">Posted by
+              <a href="#">Jakob Serlier</a>
+              on November 11, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>In the fall of 1973, the admittance rates between sexes were significantly different. The question arose whether or not this is a case of gender bias, discrimination, or if this is caused by other factors. Let's take a look at the numbers.</p>
+
+          <a href="media/truth1.png">
+            <img class="img-fluid" src="media/truth1.png" alt="">
+          </a>
+
+          <p>From these numbers alone it seems evident that there is indeed a case of sex bias, or even sex discrimination in the admittance. One factor we have not yet taken into account, however, is the fact that this is aggregated data. Once we take a look at the whole data set, we might get a better insight on what causes the admittance rates to be so different.</p>
+
+
+
+          <h2 class="section-heading">Admittance rates weren't the same across departments.</h2>
+          <p>Certain departments at UC Berkeley were harder to get admitted in. Taking this into account is of critical importance. The overall admittance rates decrease from (unnamed) departments A through F for both sexes. This is the first indication that the original data might have been misleading. However, this alone is not enough to explain the discrepancy between the two admittance rates. Let's take a look at the amount of male and female applicants per department.</p>
+          <h2 class="section-heading">From these departments, women apply more often to ones which are harder to get into.
+          </h2>
+          <p>As is seen in the visualization below, male applicants apply more often to the departments which are 'easier' to get in for both sexes. This is opposite for women, as they seem to apply to departments which are harder to get into. This is another indicator that the unsegregated data might tell another story than the aggregated data. One piece of the story, however, is still missing. What about the admittance rate per sex per department?</p>
+          <h2 class="section-heading">The differences in admittance rates between departments are very similar.</h2>
+          <p>The difference is minimal. In fact: in certain cases, you can even see the admittance rates for women being higher than that of men. Combining these three numerical facts gives us a clear view of the actual reasoning behind the original discrepancy. Admittance rates are similar per department, or even significantly higher for women, but women don't apply to 'easier' the departments as often as men do. Below is an overview of the visualization.</p>
+
+          <a href="media/truth2.png">
+            <img class="img-fluid" src="media/truth2.png" alt="">
+          </a>
+
+
+          <h2 class="section-heading">So how do we arrive at the original discrepancy?</h2>
+
+          <p>From this point it is simple to find the problem: multiply the amount of female applicants by their admittance rates per department and you get the numbers 44% and 35%. As we see, this is how we get to the original discrepancy in admittance rates between men and women.</p>
+          <a href="media/truth3.png">
+            <img class="img-fluid" src="media/truth3.png" alt="">
+          </a>
+          <a href="media/truth4.png">
+            <img class="img-fluid" src="media/truth4.png" alt="">
+          </a>
+          <p>In the end, this does not seem to have been a case of sex bias, but a case of something which is known as the Simpon's Paradox. The Simpson's Paradox is one of many statistical fallacies which we fall for in our daily lives. Berkeley wasn't sued, and there was no implicated sex bias for admittance rates. Why there was such a significant difference between the amount of applicants for the department is debatable, and a subject for a different story. The key thing to understand is that, sometimes, data and visualizations can create a story which does not align with reality. In these cases it is important to be a critical thinker, or to have access to a good statistician to do the thinking for you.</p>
+          <blockquote class="blockquote">There are three kinds of lies: lies, damned lies, and statistics. - Mark Twain</blockquote>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer"></div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

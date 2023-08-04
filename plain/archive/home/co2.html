@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CO2 trade in the EU</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.min.js" integrity="sha512-9H86d5lhAwgf2/u29K4N5G6pZThNOojI8kMT4nT4NHvVR02cM85M06KJRQXkI0XgQWBpzQyIyr8LVomyu1AQdw==" crossorigin="anonymous"></script>
+    <script>
+      d3version6 = d3
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-simple-slider@1.10.3/dist/d3-simple-slider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script>
+      d3version3 = d3
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.12.0/underscore-min.js" integrity="sha512-BDXGXSvYeLxaldQeYJZVWXJmkisgMlECofWFXKpWwXnfcp/R708nrs/BtNLH5cb/5TE7aeYRTDBRXu6kRL4VeQ==" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src=".\src\datamaps.world.min.js"></script>
+    <script src=".\src/scripts.js" type='module'></script>
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1 id="maintitle" style="text-align:center">Making sense of CO2 emissions and trading in the EU</h1>
+      <p id="value-time"></p>
+    </div>
+    <div id="content">
+      <div id="splitcontainer">
+        <div class="split split-left" id="mapcontainer">
+          
+          <div id="map"></div> 
+          <div id="chartcontainer">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+
+
+        <div class="split split-right" id="details">
+          <div id="scrollcontainer">
+            <div id='pietitle'>
+              <H3>Distributions of 
+                <div class="dropdown">
+                  <button class="dropbtn">2. Verified emissions</button>
+                  <div class="dropdown-content">
+                  </div>
+                </div> in 
+                <div id='chartTitle' style='display:inline'>the Netherlands</div>
+              </H3>
+            </div>
+            <div class='piecontainer'>
+              <div id='piechart'></div>
+            </div>
+            <p id="detailsText">
+              The map gives an overview of CO2 emissions per capita for all countries engaging in the European Trading System (ETS). <br />
+              Select a country in the map to see the emissions details of the country. Choose an ETS category to see distribution between the sectors covered in the ETS.<br />
+              All data is in tonne CO2 equivalent. All greenhouse gasses under ETS are converted to their equivalent in CO2 with regard to greenhouse effect potency.
+            </p>
+            <p id="detailfooter">
+              Chart data sourced from the European Environment Agency <a href="https://www.eea.europa.eu/data-and-maps/data/european-union-emissions-trading-scheme-14">EU ETS data </a> and map data sourced from the <a href="https://ec.europa.eu/eurostat/databrowser/view/t2020_rd300/default/table?lang=en">European Commission Eurostat CO2 emissions per country per capita</a>. For more information about the sectors and the trading system click <a href="https://ec.europa.eu/clima/policies/ets_en">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+        <div id=timeline>
+          
+          <button id='play'></button>
+          <strong>2005</strong> &nbsp;
+          <input type="range" id="yearslider" min='2005' max='2018' step="1" value="2005">
+          &nbsp;
+          <strong>2018</strong>
+          <div id="currentyear">2005</div>
+        </div>
+      </div>
+  </body>
+</html>
+  
+

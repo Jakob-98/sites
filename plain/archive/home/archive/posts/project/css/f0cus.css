@@ -1,0 +1,10 @@
+    .paper {
+            margin: 5px auto;
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            border: outset 1px #000;
+            cursor: crosshair;
+            z-index: -1;
+        }
+        

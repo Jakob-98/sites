@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+h1 {
+    color: green;
+}
+h1.title {
+    margin-bottom: 2em;
+}
+html {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+body {
+    max-width: 50em;
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ly, the goat.</title>
+  <meta name="description" content="GOAT">
+  <meta name="author" content="Mr. Farmer">
+
+  <meta property="og:title" content="GOAT">
+  <meta property="og:type" content="GOAT">
+  <meta property="og:url" content="https://goat.ly">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<style>
+.container {
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 30%;
+    margin-top: -15%; /* half of you height */
+    width: 30%;
+    margin-left: -15% /* half of you width */
+}
+.resize_fit_center {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+footer {
+   position:absolute;
+   bottom:0;
+   left: -10px;
+   right: -10px;
+   width: 100%;
+}
+
+p.copyright {
+    position: absolute;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+}
+</style>
+<body oncontextmenu="return false">
+	<div class='container'>
+        <img class='resize_fit_center' src='static/goat.png' onclick="audifuction();"/>
+	</div>	
+<script type="text/javascript">
+    function audifuction(){
+        var aaaa = new Audio("static/aaaa.mp3");
+        aaaa.play();
+    }
+
+
+    function mousehandler(e) {
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if ((eventbutton == 2) || (eventbutton == 3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    function disableCtrlKeyCombination(e) {
+        var forbiddenKeys = new Array("a", "s", "c", "x","u");
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        if (isCtrl) {
+            for (i = 0; i < forbiddenKeys.length; i++) {
+                //case-insensitive comparation
+                if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+</script>
+<footer>
+    <p class="copyright">World's best digital goat</p>
+</footer>
+</body>
+</html>
