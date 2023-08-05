@@ -2,7 +2,10 @@ import * as React from "react"
 import { graphql, Link } from "gatsby"
 import MainLayout from '../layouts/MainLayout'
 import PinnedRepos from '../components/PinnedRepos'
+import LinkWithPreview from "../components/LinkWithPreview"
 // import ScreenshotCard from '../components/ScreenshotCard';
+
+import jakobsdevPreview from '../assets/linkpreviews/jakobsdev.png';
 
 
 const HomePage = ({ data }) => {
@@ -21,10 +24,26 @@ const HomePage = ({ data }) => {
               </Link>
             </div>
           ))}
-        <h2>Links</h2>
+          <h2>Links</h2>
+          <ul>
+            <LinkWithPreview url="https://selitic.com"> Selitic.com - digital entrepreneurship </LinkWithPreview>
+            <li><a href="selilic.com" target="_blank">Selitic.com - digital entrepreneurship</a></li>
+            <h3>Archives</h3>
+            <li><a href="https://archive.jakobs.dev" target="_blank">2016-2023 personal site</a></li>
+            <li><a href="https://archive.jakobs.dev/1kb" target="_blank">1kb club entry - 622 bytes total weight</a></li>
+            <li><a href="https://archive.jakobs.dev/archaic" target="_blank">First personal site</a></li>
+            <LinkWithPreview url="https://archive.jakobs.dev" screenshotUrl={jakobsdevPreview}>
+              2016-2023 personal site
+            </LinkWithPreview>
+
+            <h3>Misc. domains</h3>
+            <li><a href="https://archive.jakobs.dev" target="_blank">Previous personal site</a></li>
+          </ul>
+          <PinnedRepos />
         </div>
         <div className="side-content">
-          <PinnedRepos/>
+          <h2>Selected content & projects</h2>
+          {/* <PinnedRepos/> */}
         </div>
       </div>
     </MainLayout>
