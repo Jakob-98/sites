@@ -19,13 +19,18 @@ const HomePage = ({ data }) => {
             For any recruiters, feel free to look at my archieved 2018-2023 personal site below.
           </p>
           <h2>Posts</h2>
-          {data.allMarkdownRemark.edges.map(post => (
-            <div key={post.node.id}>
-              <Link to={post.node.frontmatter.path}>
-                {post.node.frontmatter.date} - {post.node.frontmatter.title}
-              </Link>
-            </div>
-          ))}
+          <ul>
+            {data.allMarkdownRemark.edges.map(post => (
+              <div key={post.node.id} className="posts">
+                <li>
+                  {post.node.frontmatter.date} - {" "}
+                  <Link to={post.node.frontmatter.path}>
+                       {post.node.frontmatter.title}
+                  </Link>
+                </li>
+              </div>
+            ))}
+          </ul>
           <h2 class="hover-hint">Links</h2>
           <ul>
             <li>
@@ -40,6 +45,9 @@ const HomePage = ({ data }) => {
               </li>
               <li>
                 <LinkWithPreview url="https://archive.jakobs.dev/1kb" target="_blank">1kb club entry - 622 bytes site</LinkWithPreview>
+              </li>
+              <li>
+                <LinkWithPreview url="https://taaldenker.jakobs.dev/" target="_blank">Landing page for my mother's published book</LinkWithPreview>
               </li>
               <li>
                 <LinkWithPreview url="https://archive.jakobs.dev/archaic" target="_blank">Oldest surviving personal site</LinkWithPreview>
@@ -61,12 +69,17 @@ const HomePage = ({ data }) => {
           <ul>
             <li>
               <a href="https://github.com/Jakob-98/openai-functools/blob/main/README.md">
-                openai-functools - Simplified Generation of OpenAI Functions JSON Metadata for OpenAI gpt-3.5-turbo-0613 and gpt-4-0613
+                openai-functools - Simplified Generation of OpenAI Functions JSON Metadata for OpenAI gpt-3.5-turbo-0613 and gpt-4-0613.
               </a>
             </li>
             <li>
               <a href="https://hi.gy/t">
                 Lightweight wildlife classification on the edge: outperforming state-of-the-art benchmark models under constrained conditions with a novel approach for efficient wildlife image classification on edge devices.
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Jakob-98/sites">
+                Repository containing various sites, including this one.
               </a>
             </li>
           </ul>

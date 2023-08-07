@@ -94,7 +94,7 @@ ul {
     text-align: left;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   body {
     font-size: 18px;
   }
@@ -132,4 +132,8 @@ ul {
   font-size: 0.4em;
   margin-left: 8px;
   color: var(--secondary-text-color);
+}
+
+.posts {
+  font-size: 0.8em;
 }

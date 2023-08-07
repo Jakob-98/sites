@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import MainLayout from '../layouts/MainLayout'
 
 export default function BlogPost({ data }) {
@@ -17,6 +17,7 @@ export default function BlogPost({ data }) {
         <h2>{frontmatter.title}</h2>
         <h4>{frontmatter.date}</h4>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+        <Link to="/">Back to Home</Link>
       </div>
     </MainLayout>
   )
