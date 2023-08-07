@@ -43,7 +43,11 @@ const HomePage = ({ data }) => {
         </div>
         <div className="side-content">
           <h2>Selected content & projects</h2>
-          {/* <PinnedRepos/> */}
+          <ul>
+            <li>
+              <LinkWithPreview url="https://github.com/Jakob-98/openai-functools/blob/main/README.md">openai-functools - Simplified Generation of OpenAI Functions JSON Metadata for OpenAI gpt-3.5-turbo-0613 and gpt-4-0613</LinkWithPreview>
+            </li>
+          </ul>
         </div>
       </div>
     </MainLayout>

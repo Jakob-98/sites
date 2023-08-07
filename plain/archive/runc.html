@@ -1,9 +1,7 @@
-<canvas id="canvas" width="256" height="256" style="background: black;">
+<body>
 <script>
-    let params = new URLSearchParams(window.location.search);
-    let encodedCode = params.get('c');
-
-    let code = decodeURIComponent(encodedCode);
-
-    eval(code);
+    let code = decodeURIComponent(window.location.search.substring(3));
+    console.log(code)
+    document.body.innerHTML = code;
 </script>
+</body>
