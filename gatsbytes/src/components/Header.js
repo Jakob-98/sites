@@ -21,19 +21,22 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.siteTitle}>
-        <Link className={styles.navLink} to="/">Jakobs.dev</Link>
-      </h1>
       <nav>
-        <Link className={styles.navLink} to="/about">About</Link>
-        <Link className={styles.navLink} to="/blog">Blog</Link>
+        <Link className={styles.navLink} to="/">Home</Link>{" - "}
+        <Link className={styles.navLink} to="/about">About</Link>{" - "}
+        <Link className={styles.navLink} to="/blog">Blog</Link>{" - "}
+        <Link className={styles.navLink} to="/contact">Contact</Link>{" - "}
+        <Link className={styles.navLink} to="/resume">Resume</Link>{" | "}
+        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://spoof1.com">LinkedIn</a>{" - "}
+        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://spoof2.com">GitHub</a>
         {/* Add a button to toggle the theme */}
-        <button onClick={handleToggleTheme} className={styles.themeToggle}>
-          {theme === 'dark' ? <AiOutlineBulb/> : <AiFillBulb />}
-        </button>
       </nav>
+        <button onClick={handleToggleTheme} className={styles.themeToggle}>
+          {theme === 'dark' ? <AiOutlineBulb /> : <AiFillBulb />}
+        </button>
     </header>
   );
+
 }
 
 export default Header;

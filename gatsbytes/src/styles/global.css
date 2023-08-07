@@ -59,7 +59,9 @@ a {
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--background-color-light) !important;
+  text-decoration: underline !important;
+  background-color: var(--link-hover-color);
 }
 
 p {
@@ -69,6 +71,10 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+
+ul {
+  list-style: square;
 }
 
 .blog-post-content {
@@ -112,7 +118,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
   }
 }
 /* For desktop styles */

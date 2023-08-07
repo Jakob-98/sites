@@ -9,14 +9,14 @@
 hr {
     width: 70%;
     height: 1px;
-    background-color: #333;
+    background-color: var(--secondary-text-color);
     margin: 10px 0;
     border: none;
 }
 
 .loremText {
   margin-bottom: 10px;
-  color: #333;
+  color: var(--secondary-text-color);
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ hr {
 
 .navLink {
   margin: 0 10px;
-  color: #333;
+  color: var(--secondary-text-color);
   font-size: 1.5em;
   text-decoration: none;
 }
@@ -37,7 +37,7 @@ hr {
 }
 
 .copyright {
-  color: #333;
+  color: var(--secondary-text-color);
   display: flex;
   align-items: center;
 }

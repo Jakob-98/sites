@@ -2,25 +2,26 @@
   background-color: var(--background-color);
   padding: 10px 20px;
   display: flex;
+  justify-content: center; /* This centers the nav links. */
+  align-items: center; /* This centers the items vertically. */
 }
 
-.siteTitle {
-  margin: 0;
-  font-size: 2em;
-  color: #333;
-}
 
 .navLink {
   margin-right: 15px;
-  color: #333;
+  margin: 0 7.5px; /* split the 15px margin to both sides */
+  color: var(--secondary-text-color);
   text-decoration: none;
+  font-size: 0.8em;
 }
 
 .navLink:hover {
-  color: #0077cc;
+  color: var(--link-hover-color);
 }
 
 .themeToggle {
+  position: absolute;
+  right: 0;
   background: none;
   border: none;
   color: var(--link-color);
@@ -31,3 +32,4 @@
 .themeToggle:hover {
   color: var(--link-hover-color);
 }
+
