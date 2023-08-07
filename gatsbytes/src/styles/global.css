@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
-/* :root {
-  --background-color: #fff;
-  --primary-text-color: #333;
-  --secondary-text-color: #777;
-  --link-color: #0077cc;
-  --link-hover-color: #005999;
-} */
-
 :root {
   /* dark theme */
   --background-color-dark: #222;
@@ -31,7 +23,6 @@
   --link-color: var(--link-color-dark);
   --link-hover-color: var(--link-hover-color-dark);
 }
-
 
 * {
   box-sizing: border-box;
@@ -83,17 +74,15 @@ ul {
 
 .content-wrapper {
   display: flex;
-  justify-content: center; /* centralizes children horizontally */
-  align-items: flex-start; /* aligns children at the top */
-  padding: 0.5em; /* apply padding here instead of main and side content */
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5em;
   width: 100%;
 }
 
 .main-content {
   flex: 1 0 auto;
-  max-width: 600px; /* your specification */
-  text-align: left; /* your specification */
-  min-height: 70vh;
+  max-width: 600px;
 }
 
 .side-content {
@@ -101,6 +90,9 @@ ul {
   margin-left: 15%;
 }
 
+.side-content ul {
+    text-align: left;
+}
 
 @media (max-width: 800px) {
   body {
@@ -118,10 +110,9 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
   }
 }
-/* For desktop styles */
+
 @media (min-width: 601px) {
   body {
     font-size: 20px;
@@ -134,5 +125,11 @@ ul {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  text-align: center;
+}
+
+.hover-hint::after {
+  content: "(try hovering)";
+  font-size: 0.4em;
+  margin-left: 8px;
+  color: var(--secondary-text-color);
 }

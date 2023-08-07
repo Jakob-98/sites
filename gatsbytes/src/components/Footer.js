@@ -7,16 +7,16 @@ const Footer = () => {
     <footer className={styles.footer}>
       <hr/>
       <p className={styles.loremText}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+        So long and thanks for all the fish.
       </p>
       <div className={styles.socials}>
-        <a href="https://github.com/" target="_blank" rel="noreferrer" className={styles.navLink}>
+        <a href="https://github.com/Jakob-98" target="_blank" rel="noreferrer" className={styles.navLink}>
           <AiFillGithub />
         </a>
         {/* <a href="https://twitter.com/" target="_blank" rel="noreferrer" className={styles.navLink}>
           <AiOutlineTwitter />
         </a> */}
-        <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className={styles.navLink}>
+        <a href="https://linkedin.com/in/serlier" target="_blank" rel="noreferrer" className={styles.navLink}>
           <AiFillLinkedin />
         </a>
         {/* <a href="https://facebook.com/" target="_blank" rel="noreferrer" className={styles.navLink}>

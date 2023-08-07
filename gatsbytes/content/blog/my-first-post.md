@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "Probably a placeholder: A Journey Through Lorem Ipsum"
 date: "2023-07-20"
 path: "/my-first-post"
 ---
@@ -27,5 +27,3 @@ Nam elementum felis non velit eleifend, vel rutrum arcu malesuada. Nunc consequa
 ![Image Source](https://picsum.photos/600)
 
 And that concludes our journey through the realm of Lorem Ipsum. We hope you enjoyed the ride!
-
-(Note: The images used here are placeholders from example.com, and they are not real images. Please replace them with appropriate images from legitimate sources when using this content.)

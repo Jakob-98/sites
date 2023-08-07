@@ -22,13 +22,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        <Link className={styles.navLink} to="/">Home</Link>{" - "}
-        <Link className={styles.navLink} to="/about">About</Link>{" - "}
-        <Link className={styles.navLink} to="/blog">Blog</Link>{" - "}
-        <Link className={styles.navLink} to="/contact">Contact</Link>{" - "}
-        <Link className={styles.navLink} to="/resume">Resume</Link>{" | "}
-        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://spoof1.com">LinkedIn</a>{" - "}
-        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://spoof2.com">GitHub</a>
+        <Link className={styles.navLink} to="/">Home</Link>{" | "}
+        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/serlier">LinkedIn</a>{" - "}
+        <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://github.com/Jakob-98">GitHub</a>
         {/* Add a button to toggle the theme */}
       </nav>
         <button onClick={handleToggleTheme} className={styles.themeToggle}>
