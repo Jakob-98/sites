@@ -1,4 +1,5 @@
 // ChatComponent.js
+// ChatComponent.js
 import React, { useState } from "react";
 import axios from "axios";
 import * as styles from './chat.module.css';
@@ -7,20 +8,26 @@ const ChatComponent = () => {
   const [messages, setMessages] = useState([]);
   const [userMessage, setUserMessage] = useState("");
 
-    const handleSendMessage = async () => {
+  const placeholderText = "Hi! Tell me something about yourself.";
+
+  const handleSendMessage = async () => {
     const backendURL = process.env.GATSBY_FLASK_BACKEND_URL;
+
+    // Use placeholder value if userMessage is empty
+    const messageToSend = userMessage || placeholderText;
+
     try {
-        const response = await axios.post(`${backendURL}/chat`, {
-        message: userMessage,
-        });
-        // Extracting content from the nested structure
-        const serverResponse = response.data.response.choices[0].message.content;
-        setMessages([...messages, { sender: "user", text: userMessage }, { sender: "server", text: serverResponse }]);
-        setUserMessage("");
+      const response = await axios.post(`${backendURL}/chat`, {
+        message: messageToSend,
+      });
+      // Extracting content from the nested structure
+      const serverResponse = response.data.response.choices[0].message.content;
+      setMessages([...messages, { sender: "user", text: messageToSend }, { sender: "server", text: serverResponse }]);
+      setUserMessage("");
     } catch (error) {
-        console.error("Error sending message:", error);
+      console.error("Error sending message:", error);
     }
-    };
+  };
 
   return (
     <div className={styles.container}>
@@ -35,7 +42,7 @@ const ChatComponent = () => {
         <input
           type="text"
           value={userMessage}
-          placeholder="Hi! Tell me something about yourself."
+          placeholder={placeholderText}
           onChange={(e) => setUserMessage(e.target.value)}
         />
         <button onClick={handleSendMessage}>Send</button>
