@@ -1,0 +1,56 @@
+.container {
+  background-color: var(--background-color);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  width: fit-content;
+  color: var(--primary-text-color);
+}
+
+.message.user {
+  border: 1px solid var(--secondary-text-color);
+  margin-left: auto;
+}
+
+.message.server {
+  border: 1px solid var(--secondary-text-color);
+  margin-right: auto;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--link-hover-color);
+  }
+}

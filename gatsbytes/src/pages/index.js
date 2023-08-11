@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import MainLayout from '../layouts/MainLayout'
 import PinnedRepos from '../components/PinnedRepos'
 import LinkWithPreview from "../components/LinkWithPreview"
+import ChatComponent from "../components/Chat"
 // import ScreenshotCard from '../components/ScreenshotCard';
 
 import jakobsdevPreview from '../assets/linkpreviews/jakobsdev.png';
@@ -16,7 +17,7 @@ const HomePage = ({ data }) => {
           <h2>Jakobs.dev</h2>
           <p>
             New home page under construction.. <br/>
-            For any recruiters, feel free to look at my archieved 2018-2023 personal site below.
+            For now, feel free to look at my archieved 2018-2023 personal site below.
           </p>
           <h2>Posts</h2>
           <ul>
@@ -65,6 +66,9 @@ const HomePage = ({ data }) => {
           <PinnedRepos />
         </div>
         <div className="side-content">
+          <h2>Chat with Jakob_AI</h2>
+          <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
+          <ChatComponent />
           <h2>Selected content & projects</h2>
           <ul>
             <li>
