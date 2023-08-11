@@ -13,9 +13,9 @@ def chat():
     data = request.get_json()
     msg = data.get('message', '')
     
-    new_context = Context(Jakob)
-    llm = openaigpt.OpenaiGpt()
-    chat_orchestrator = orchestrator.Orchestrator(llm, new_context)
+    new_context = Context(Jakob())
+    llm = OpenaiGpt()
+    chat_orchestrator = Orchestrator(llm, new_context)
     
     response = chat_orchestrator.user_message(msg)
     
