@@ -22,7 +22,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        <Link className={styles.navLink} to="/">Home</Link>{" | "}
+        <Link className={styles.navLink} to="/">Home</Link>{" - "}
+        <Link className={styles.navLink} to="/chat">JAKOB-O-BOT-2000</Link>{" | "}
         <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/serlier">LinkedIn</a>{" - "}
         <a className={styles.navLink} target="_blank" rel="noopener noreferrer" href="https://github.com/Jakob-98">GitHub</a>
         {/* Add a button to toggle the theme */}
