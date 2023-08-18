@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 import MainLayout from '../layouts/MainLayout'
+import SEO from '../helper/seo';
 
 export default function BlogPost({ data }) {
   // Ensure that markdownRemark is not null
@@ -10,9 +11,18 @@ export default function BlogPost({ data }) {
 
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  // TODO remove hardcode:
+  const siteUrl = "https://jakobs.dev"; // You can also fetch this from your siteMetadata in gatsby-config.js
 
   return (
     <MainLayout>
+      {/* Add the SEO component here */}
+      <SEO
+        title={frontmatter.title}
+        description={frontmatter.description || "Default description"}
+        url={siteUrl + frontmatter.path}
+        image={frontmatter.image ? frontmatter.image : "default-image-url.jpg"}
+      />
       <div className="main-content">
         <h2>{frontmatter.title}</h2>
         <h4>{frontmatter.date}</h4>
@@ -31,6 +41,8 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
+        image
       }
     }
   }
