@@ -7,7 +7,7 @@ image: "media/gzip.png"
 description: "Using GZIP compression and the k-Nearest Neighbors algorithm, we explore an innovative approach to classifying the MNIST dataset with about 78% accuracy"
 ---
 
-![GZIP](media/gzip.png)
+![GZIP](https://jakobs.dev/media/gzip.png)
 
 We can 'solve' MNIST up to ~78% accuracy with the following code-golfed obscurity:
 
@@ -19,7 +19,10 @@ def ncd(x, y):
 
 cls = [(x, c(x), l) for x, l in training_set]
 
-correct_predictions = sum([np.array_equal(Counter([l for _, _, l in sorted([(ncd(x1, x), x, l) for x, _, l in cls], key=lambda t: t[0])[:5]]).most_common(1)[0][0], label) for x1, label in test_set])
+correct_predictions = sum([np.array_equal(Counter(
+    [l for _, _, l in sorted([(ncd(x1, x), x, l) for x, _, l in cls],
+     key=lambda t: t[0])[:5]]).most_common(1)[0][0], label)
+     for x1, label in test_set])
 ```
 
 If you just want to see the code sample, [here](https://github.com/Jakob-98/mono/blob/main/python/gzip_mnist/mnist_gzip.ipynb) is a link to the Jupyter Notebook containing the code to run this experiment.
