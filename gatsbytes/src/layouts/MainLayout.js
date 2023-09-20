@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import "../styles/global.css" // import global styles
 import 'prismjs/themes/prism-okaidia.css';  // Dark theme
+import "../styles/global.css" // import global styles
 
 
 const MainLayout = ({ children }) => {
