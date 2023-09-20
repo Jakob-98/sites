@@ -3,7 +3,7 @@ title: "78% MNIST accuracy using GZIP in under 10 lines of code."
 
 date: "2023-09-20"
 path: "/solving-mnist-with-gzip"
-image: "media/gzip.png"
+image: "https://jakobs.dev/media/gzip.png"
 description: "Using GZIP compression and the k-Nearest Neighbors algorithm, we explore an innovative approach to classifying the MNIST dataset with about 78% accuracy"
 ---
 
