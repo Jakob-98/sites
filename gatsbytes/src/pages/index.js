@@ -66,7 +66,7 @@ const HomePage = ({ data }) => {
           <PinnedRepos />
         </div>
         <div className="side-content">
-          <h2>Chat with JAKOB-O-BOT-2000</h2>
+          <h2>Chat with the Jakob-Bot</h2>
           <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
           <ChatComponent />
           <h2>Selected content & projects</h2>
