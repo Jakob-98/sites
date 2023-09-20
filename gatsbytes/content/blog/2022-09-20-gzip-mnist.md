@@ -1,5 +1,5 @@
 ---
-title: "78% MNIST accuracy using GZIP under 10 lines of code."
+title: "78% MNIST accuracy using GZIP in under 10 lines of code."
 
 date: "2023-09-20"
 path: "/solving-mnist-with-gzip"
