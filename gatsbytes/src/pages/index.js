@@ -16,8 +16,7 @@ const HomePage = ({ data }) => {
         <div className="main-content">
           <h2>Jakobs.dev</h2>
           <p>
-            New home page under construction.. <br/>
-            For now, feel free to look at my archieved 2018-2023 personal site below.
+            Welcome to the homepage of Jakob Serlier.
           </p>
           <h2>Posts</h2>
           <ul>

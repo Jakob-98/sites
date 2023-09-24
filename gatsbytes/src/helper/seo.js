@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet';
 const SEO = ({ title, description, url, image }) => {
   return (
     <Helmet>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="description" content={description} />
       {/* OpenGraph tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

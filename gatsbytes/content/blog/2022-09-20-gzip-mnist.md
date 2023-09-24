@@ -9,7 +9,7 @@ description: "Using GZIP compression and the k-Nearest Neighbors algorithm, we e
 
 ![GZIP](https://jakobs.dev/media/gzip.png)
 
-> *Edit:* brief addendum after hitting the HN frontpage; MNIST is a straightforward dataset, and higher accuracies are possible with various methods. The novelty of this post isn't aiming for state-of-the-art results, but showcasing the potential of using compression as a unique, model-free classification tool. The code golf just adds a layer of complexity for fun.
+> Addendum after hitting the [HN frontpage](https://news.ycombinator.com/item?id=37583593): MNIST is a straightforward dataset, and higher accuracies are possible with various methods. The novelty of this post isn't aiming for state-of-the-art results, but showcasing the potential of using compression as a unique, model-free classification tool. The code golf just adds a layer of complexity for fun.
 
 We can 'solve' MNIST up to ~78% accuracy with the following code-golfed obscurity:
 
@@ -71,4 +71,4 @@ for (x1, actual_label) in tqdm(test_set[:100]):
 ```
 
 
-**Note:** after writing this post, I found [this article](https://www.blackhc.net/blog/2019/mnist-by-zip/) by Andreas Kirsch taking a similar approach back in 2019. His approach reaches around 35% accuracy.
+**Note:** after writing this post, I found [this article](https://www.blackhc.net/blog/2019/mnist-by-zip/) by Andreas Kirsch taking a similar approach back in 2019.
