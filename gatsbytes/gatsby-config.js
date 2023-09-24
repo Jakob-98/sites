@@ -10,6 +10,7 @@ module.exports = {
   siteMetadata: {
     title: 'blog',
     description: 'Ramblings of Jakob Serlier',
+    siteUrl: 'https://jakobs.dev', 
   },
   plugins: [
     {

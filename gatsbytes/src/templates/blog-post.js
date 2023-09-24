@@ -22,7 +22,7 @@ export default function BlogPost({ data }) {
         description={frontmatter.description || "Default description"}
         url={siteUrl + frontmatter.path}
         image={frontmatter.image ? frontmatter.image : "default-image-url.jpg"}
-        date = {frontmatter.date}
+        date={frontmatter.date}
       />
       <div className="main-content">
         <h2>{frontmatter.title}</h2>

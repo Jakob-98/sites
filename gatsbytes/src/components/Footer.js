@@ -1,5 +1,6 @@
 import React from 'react';
-import { AiFillGithub, AiFillLinkedin, AiOutlineRss } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
+import {BsRssFill} from 'react-icons/bs';
 import * as styles from './footer.module.css';
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
           <AiFillLinkedin />
         </a>
         <a href="/rss.xml" target="_blank" rel="noreferrer" className={styles.navLink}>
-          <AiOutlineRss />
+          <BsRssFill />
         </a>
       </div>
       <p className={styles.copyright}>
