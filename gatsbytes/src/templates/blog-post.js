@@ -22,10 +22,11 @@ export default function BlogPost({ data }) {
         description={frontmatter.description || "Default description"}
         url={siteUrl + frontmatter.path}
         image={frontmatter.image ? frontmatter.image : "default-image-url.jpg"}
+        date = {frontmatter.date}
       />
       <div className="main-content">
         <h2>{frontmatter.title}</h2>
-        <h4>{frontmatter.date}</h4>
+        <h4>{frontmatter.date} • Written by Jakob Serlier</h4>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         <Link to="/">Back to Home</Link>
       </div>

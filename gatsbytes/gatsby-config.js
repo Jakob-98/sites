@@ -26,22 +26,68 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              // Specify that you want to highlight Python specifically (although it will highlight other languages too if they're present)
               languages: ["python"],
-
-              // This is used to allow setting a language for inline code
-              // (i.e. single backticks) by creating a separator.
               inlineCodeMarker: null,
-
-              // This lets you set up language aliases.
               aliases: {},
-
-              // Additional settings can be added as per your requirements.
             },
           },
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  edges {
+                    node {
+                      html
+                      frontmatter {
+                        title
+                        date
+                        path
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Jakob Serlier's RSS feed",
+          }
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 }
+

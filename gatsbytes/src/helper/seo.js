@@ -1,9 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description, url, image }) => {
+
+
+const SEO = ({ title, description, url, image, date }) => {
+    const schemaOrgJSONLD = {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": url
+    },
+    "headline": title,
+    "image": [image],
+    "datePublished": date,
+    "author": {
+      "@type": "Person",
+      "name": "Jakob Serlier"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ramblings of Jakob Serlier",
+      "logo": {
+        "@type": "ImageObject",
+        "url":  "https://jakobs.dev/favicon.ico"
+      }
+    },
+    "description": description
+  };
+
   return (
     <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD)}
+      </script>
       <meta charset="UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="description" content={description} />
