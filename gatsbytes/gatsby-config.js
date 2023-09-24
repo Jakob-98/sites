@@ -87,8 +87,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        exclude: [`/404`],
+      }
+    },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
   ],
 }
 
