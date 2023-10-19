@@ -22,4 +22,6 @@ I'd reckon I would ask him directly. Gary-Pete replied: "As an AI language model
 
 ---
 
-Using LLMs for automatically generating unit tests is a powerful tool. It allows me to quickly iterate, especially since I have to build (Python) libraries from scratch often, and gives me an easy way to check for breaking changes in my interfaces and types (my python-averse colleagues would be grinning at this statement). Especially with LLMs like GPT-4-32k, it can be quite powerful given the large context window. Taking into account the previous, it is no replacement for well-thought out unit tests (or even Test Driven Development (TDD)) and might give a false sense of security. Be well versed in writing tests yourself first! Overall, your mileage may vary, but do experiment.
+Using LLMs for automatically generating unit tests is a powerful tool. It allows me to quickly iterate, especially since I have to build (Python) libraries from scratch often, and gives me an easy way to check for breaking changes in my interfaces and types (my python-averse colleagues would be grinning at this statement). Especially with LLMs like GPT-4-32k, it can be quite powerful given the large context window. 
+
+Taking into account the previous, it is no replacement for well-thought out unit tests (or even Test Driven Development (TDD)) and might give a false sense of security. Be well versed in writing tests yourself first! Overall, your mileage may vary, but do experiment.
