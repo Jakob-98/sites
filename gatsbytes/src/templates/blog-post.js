@@ -47,7 +47,7 @@ export default function BlogPost({ data }) {
         <h4>{frontmatter.date} • Written by Jakob Serlier</h4>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         <Link to="/">Back to Home</Link>
-        <div id="comment-section">comments</div>
+        <div id="comment-section"></div>
       </div>
     </MainLayout>
   );
