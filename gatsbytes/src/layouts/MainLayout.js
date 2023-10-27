@@ -5,8 +5,6 @@ import GoogleAnalytics from '../helper/googleanalytics';
 import 'prismjs/themes/prism-okaidia.css';  // Dark theme
 import "../styles/global.css" // import global styles
 
-
-
 const MainLayout = ({ children }) => {
   return (
     <div>
