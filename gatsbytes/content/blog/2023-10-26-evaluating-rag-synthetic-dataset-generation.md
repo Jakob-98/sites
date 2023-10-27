@@ -6,7 +6,7 @@ image: "https://jakobs.dev/media/rag-eval-banner.png"
 description: "An exploration of the RAG pattern in Large Language Models, highlighting the importance of evaluating their performance using question-answer pairs. The article also delves into the challenges and benefits of using both golden and synthetic (silver) datasets for development and assessment"
 ---
 
-> **In short:** The RAG pattern for LLMs can be evaluated using QA pairs. Creating a "golden" dataset is expensive, but an auto-generated "silver" dataset can help guide RAG's development and initial retrieval process. Below one approach can be found.
+> **In short:** The RAG pattern for LLMs can be evaluated using QA pairs. Creating a "golden" dataset is expensive, but an auto-generated "silver" dataset can help guide RAG's development and initial retrieval process. In this article, one approach is proposed.
 
 Working on the RAG (Retrieval, Augmentation, Generation) pattern for LLMs allows for using the LLM's natural language capabilities as a reasoning-capable frontend for providing context outside of the training data. It is crucial, however, to be able to evaluate the generated question-answer pairs such that the implemented RAG pattern matches both real-world usecases and the quality of generated answers can be verified. This is especially difficult given domain specific and highly-technical documentation and context. Often, this is tackled using a *golden* dataset which aims to closely match actual user scenarios as well as a broad range of possible question/answer pairs. A golden dataset might consist of a question, a context and an ideal answer. The golden dataset is quite costly to generate and maintain as subject matter experts (SMEs) need to be highly involved in creating the dataset. This means it is often practically infeasible to generate a wide-spanning golden dataset for large amount of documentation.
 
@@ -70,7 +70,7 @@ The table below gives a sample of QA-pairs generated from pages 10~30 in the [Fo
 
 
 <details>
-  <summary>View results</summary>
+  <summary>View results (click me)</summary>
 
 | Question | Answer |
 | --- | --- |
