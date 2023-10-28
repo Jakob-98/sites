@@ -8,9 +8,9 @@ require('dotenv').config({
  */
 module.exports = {
   siteMetadata: {
-    title: 'blog',
+    title: 'Jakob Serlier\'s Personal Site',
     description: 'Ramblings of Jakob Serlier',
-    siteUrl: 'https://jakobs.dev', 
+    siteUrl: 'https://jakobs.dev',
   },
   plugins: [
     {
@@ -90,7 +90,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
         exclude: [`/404`],
       }
     },

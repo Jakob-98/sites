@@ -1,15 +1,14 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
-import { Helmet } from 'react-helmet';
 import MainLayout from '../layouts/MainLayout';
 import SEO from '../helper/seo';
 
 export default function BlogPost({ data }) {
-
   const markdownRemark = data?.markdownRemark;
   const frontmatter = markdownRemark?.frontmatter;
   const html = markdownRemark?.html;
-  const siteUrl = "https://jakobs.dev";  // Consider moving this to a global config or using Gatsby's site metadata.
+  const siteTitle = data.site.siteMetadata.title;
+  const siteUrl = data.site.siteMetadata.siteUrl;
 
   React.useEffect(() => {
     if (frontmatter && typeof window !== "undefined" && typeof window.initComments === "function") {
@@ -29,19 +28,13 @@ export default function BlogPost({ data }) {
 
   return (
     <MainLayout>
-      <Helmet>
-        <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css" />
-        <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
-      </Helmet>
-
       <SEO
-        title={frontmatter.title}
+        title={`${frontmatter.title} | ${siteTitle}`}
         description={frontmatter.description || "Default description"}
         url={siteUrl + frontmatter.path}
         image={frontmatter.image ? frontmatter.image : "default-image-url.jpg"}
         date={frontmatter.date}
       />
-      
       <div className="main-content">
         <h2>{frontmatter.title}</h2>
         <h4>{frontmatter.date} • Written by Jakob Serlier</h4>
@@ -55,6 +48,12 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
