@@ -28,6 +28,9 @@ export default function BlogPost({ data }) {
 
   return (
     <MainLayout>
+      <helmet>
+        <link rel="canonical" href={`${siteUrl}${frontmatter.path}`} />
+      </helmet>
       <SEO
         title={`${frontmatter.title} | ${siteTitle}`}
         description={frontmatter.description || "Default description"}
