@@ -5,6 +5,7 @@ date: "2023-10-19"
 path: "/on-automating-unit-tests-with-llms"
 image: "https://jakobs.dev/media/robot-colleague.png"
 description: "Using LLMs for auto-generating unit tests aids rapid development in building Python libraries, but while beneficial, it's no substitute for deliberate test-writing and might create a false safety net"
+tags: ['satire']
 ---
 
 Dear colleagues, I have a confession to make: I have been delegating some of my unit tests to my Jr. engineer, Gary-Pete Truman.

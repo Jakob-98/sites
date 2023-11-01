@@ -1,5 +1,5 @@
 ---
-title: "[IMPORTED] What defines great software: solving my problem in under 5 minutes with Tailscale"
+title: "What defines great software: solving my problem in under 5 minutes with Tailscale"
 date: "2022-05-04"
 path: /tailscale-great-software
 template: "post"

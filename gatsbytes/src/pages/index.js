@@ -5,11 +5,15 @@ import PinnedRepos from '../components/PinnedRepos'
 import LinkWithPreview from "../components/LinkWithPreview"
 import ChatComponent from "../components/Chat"
 // import ScreenshotCard from '../components/ScreenshotCard';
+import { groupBy } from 'lodash';
 
 import jakobsdevPreview from '../assets/linkpreviews/jakobsdev.png';
 
 
 const HomePage = ({ data }) => {
+  const techPosts = data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.tags && post.node.frontmatter.tags.includes('tech'));
+  const miscPosts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.tags || !post.node.frontmatter.tags.includes('tech'));
+
   return (
     <MainLayout>
       <div className="content-wrapper">
@@ -19,8 +23,22 @@ const HomePage = ({ data }) => {
             Welcome to the homepage of Jakob Serlier.
           </p>
           <h2>Posts</h2>
+          <h4>Tech & longread</h4>
           <ul>
-            {data.allMarkdownRemark.edges.map(post => (
+            {techPosts.map(post => (
+              <div key={post.node.id} className="posts">
+                <li>
+                  {post.node.frontmatter.date} - {" "}
+                  <Link to={post.node.frontmatter.path}>
+                       {post.node.frontmatter.title}
+                  </Link>
+                </li>
+              </div>
+            ))}
+          </ul>
+          <h4>Bytesize & Misc</h4>
+          <ul>
+            {miscPosts.map(post => (
               <div key={post.node.id} className="posts">
                 <li>
                   {post.node.frontmatter.date} - {" "}
@@ -62,12 +80,12 @@ const HomePage = ({ data }) => {
               <li><a href="https://shortlogs.com" target="_blank">shortlogs.com</a></li>
             </ul>
           </ul>
-          <PinnedRepos />
         </div>
         <div className="side-content">
           <h2>Chat with the Jakob-Bot</h2>
           <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
           <ChatComponent />
+          <PinnedRepos />
           <h2>Selected content & projects</h2>
           <ul>
             <li>
@@ -103,6 +121,7 @@ export const query = graphql`
             title
             date(formatString: "YYYY-MM-DD")
             path
+            tags
           }
         }
       }

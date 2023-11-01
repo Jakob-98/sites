@@ -5,6 +5,7 @@ date: "2023-09-20"
 path: "/solving-mnist-with-gzip"
 image: "https://jakobs.dev/media/gzip.png"
 description: "Using GZIP compression and the k-Nearest Neighbors algorithm, we explore an innovative approach to classifying the MNIST dataset with about 78% accuracy"
+tags: ["tech"]
 ---
 
 ![GZIP](https://jakobs.dev/media/gzip.png)

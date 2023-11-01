@@ -4,6 +4,7 @@ date: "2023-10-26"
 path: "/evaluating-rag-synthetic-dataset-generation"
 image: "https://jakobs.dev/media/rag-eval-banner.png"
 description: "An exploration of the RAG pattern in Large Language Models, highlighting the importance of evaluating their performance using question-answer pairs. The article also delves into the challenges and benefits of using both golden and synthetic (silver) datasets for development and assessment"
+tags: ['tech', 'llms', 'RAG']
 ---
 
 > **In short:** The RAG pattern for LLMs can be evaluated using QA pairs. Creating a "golden" dataset is expensive, but an auto-generated "silver" dataset can help guide RAG's development and initial retrieval process. In this article, one approach is proposed.

@@ -4,6 +4,7 @@ date: "2023-08-18"
 path: "/llm-production-learnings-0"
 image: "https://github.com/Jakob-98/openai-functools/blob/5f6b7cb152b03029c787c01f809d4522ae9c6f68/assets/openai-functions.png?raw=true"
 description: "We have recently engaged in an architecture design & upskilling session with an enterprise customer for building a solution using an LLM as part of their *reasoning engine*. Their aim is to utilize this to assist engineers in navigating complex technical documentation. This is a collection of some of the learnings"
+tags: ['tech']
 ---
 
 *Disclaimer*: I am an employee at Microsoft ISE. However, the views and opinions are of my own.

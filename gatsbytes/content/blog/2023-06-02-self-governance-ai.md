@@ -1,14 +1,12 @@
 ---
-title: "[IMPORTED] One approach to achieving self-governing AI today"
+title: "One approach to achieving self-governing AI today"
 date: "2023-02-06"
 path: /self-governing-ai
 template: "post"
 draft: false
 slug: "self-governing-ai"
 category: "AI"
-tags:
-  - "Artificial Intelligence"
-  - "Self-Governing"
+tags: ["Artificial Intelligence"]
 description: "This post discusses the concept of self-governing AI, its prerequisites and the prospects of realizing it in the current state of AI technology."
 socialImage: "/media/governing.png"
 ---

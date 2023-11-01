@@ -41,6 +41,9 @@ export default function BlogPost({ data }) {
       <div className="main-content">
         <h2>{frontmatter.title}</h2>
         <h4>{frontmatter.date} • Written by Jakob Serlier</h4>
+        {frontmatter.tags && frontmatter.tags.length > 0 && (
+          <h6>Tags: {frontmatter.tags.join(', ')}</h6>
+        )}
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         <Link to="/">Back to Home</Link>
         <div id="comment-section"></div>
@@ -65,6 +68,7 @@ export const query = graphql`
         title
         description
         image
+        tags
       }
     }
   }
