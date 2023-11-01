@@ -27,7 +27,7 @@ export default function BlogPost({ data }) {
   }
 
   return (
-    <MainLayout>
+    <MainLayout pageTitle={frontmatter.title}>
       <helmet>
         <link rel="canonical" href={`${siteUrl}${frontmatter.path}`} />
       </helmet>

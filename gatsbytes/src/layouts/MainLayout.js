@@ -7,7 +7,7 @@ import GoogleAnalytics from '../helper/googleanalytics';
 import 'prismjs/themes/prism-okaidia.css';
 import "../styles/global.css"
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, pageTitle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,10 +18,15 @@ const MainLayout = ({ children }) => {
     }
   `)
 
+  // If pageTitle is defined, prepend it to the site title, else use site title
+  const title = pageTitle
+    ? `${pageTitle} | ${data.site.siteMetadata.title}`
+    : data.site.siteMetadata.title;
+
   return (
     <div>
       <Helmet
-        title={data.site.siteMetadata.title}
+        title={title}
         meta={[
           { name: 'description', content: 'Ramblings of Jakob Serlier' },
           { name: 'keywords', content: 'jakob, serlier, blog, personal site, technology, Deep Learning, AI, LLM' },
