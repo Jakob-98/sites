@@ -30,7 +30,7 @@ const HomePage = ({ data }) => {
                 <li>
                   {post.node.frontmatter.date} - {" "}
                   <Link to={post.node.frontmatter.path}>
-                       {post.node.frontmatter.title}
+                    {post.node.frontmatter.title}
                   </Link>
                 </li>
               </div>
@@ -43,7 +43,7 @@ const HomePage = ({ data }) => {
                 <li>
                   {post.node.frontmatter.date} - {" "}
                   <Link to={post.node.frontmatter.path}>
-                       {post.node.frontmatter.title}
+                    {post.node.frontmatter.title}
                   </Link>
                 </li>
               </div>
@@ -80,12 +80,6 @@ const HomePage = ({ data }) => {
               <li><a href="https://shortlogs.com" target="_blank">shortlogs.com</a></li>
             </ul>
           </ul>
-        </div>
-        <div className="side-content">
-          <h2>Chat with the Jakob-Bot</h2>
-          <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
-          <ChatComponent />
-          <PinnedRepos />
           <h2>Selected content & projects</h2>
           <ul>
             <li>
@@ -104,6 +98,13 @@ const HomePage = ({ data }) => {
               </a>
             </li>
           </ul>
+        </div>
+        <div className="side-content">
+          <h2>Chat with the Jakob-Bot</h2>
+          <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
+          <ChatComponent />
+          <PinnedRepos />
+
         </div>
       </div>
     </MainLayout>
