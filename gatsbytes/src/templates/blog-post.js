@@ -44,6 +44,7 @@ export default function BlogPost({ data }) {
         {frontmatter.tags && frontmatter.tags.length > 0 && (
           <h6>Tags: {frontmatter.tags.join(', ')}</h6>
         )}
+        ---
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         <Link to="/">Back to Home</Link>
         <div id="comment-section"></div>
