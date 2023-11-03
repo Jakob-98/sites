@@ -24,6 +24,18 @@ def main():
         pickle.dump(m, open(Path(os.getenv('APPDATA', os.path.expanduser('~')),'ai_chat.pkl'), 'wb'))
 ```
 
+usage:
+
+```bash
+PS C:\Projects\Personal\xsgpt> xsgpt
+You: Hello! My name is jakob
+AI: Hello, Jakob! How can I assist you today?
+You: exit
+PS C:\Projects\Personal\xsgpt> xsgpt
+You: What is my name?
+AI: Your name is Jakob.
+```
+
 (Installable) packaged version and source [found here](https://github.com/Jakob-98/xsgpt/tree/main).
 
 Cheers.
