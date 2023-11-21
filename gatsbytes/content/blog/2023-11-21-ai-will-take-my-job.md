@@ -13,7 +13,7 @@ On two different occasions and coincidentally, I have been approached with the q
 
 The approach: using the new [GPTs](https://openai.com/blog/introducing-gpts) and uploading the Burgerlijk Wetboek (civil code) in plain-text, see below the result of asking a question ‘coming from a client’ - and the actual law it referenced. Creating this example took minimal effort and no real developer experience.
 
-![law llm example](./media/law-llm.png)
+![law llm example](/media/law-llm.png)
 
 My non-developer acquaintances were quite surprised by the results, so I thought it would be apt to share. While I don’t think examples like this indicate that AI will take all jobs, and without diving into the socio-economic impact or moral implications, I believe we are closing in on an adapt-or-die situation for all those potentially impacted in various industries. That said, I am still waiting for GPT to fix my sink.
 
