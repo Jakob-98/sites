@@ -1,6 +1,6 @@
 ---
 title: "Encoding hidden prompt in LLMs as potential attack vector."
-date: "2024-15-01"
+date: "2024-01-15"
 path: "/gpt-hidden-prompt-base64-attack-vector"
 image: "https://jakobs.dev/media/jakobsdev.png"
 description: "Inject hidden prompt in LLMs using Base64 encoding."
