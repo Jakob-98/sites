@@ -4,7 +4,7 @@ date: "2024-15-01"
 path: "/gpt-hidden-prompt-base64-attack-vector"
 image: "https://jakobs.dev/media/jakobsdev.png"
 description: "Inject hidden prompt in LLMs using Base64 encoding."
-tags: ["LLM", "short", "gpt-4"]
+tags: ["LLM", "tech", "gpt-4"]
 ---
 
 The recent publication on LLM ["sleeper agents"](https://arxiv.org/abs/2401.05566) prompted me to re-explore influencing LLMs to pursue alternative objectives. In this case, without alterting training data but just using the prompt at hand.
