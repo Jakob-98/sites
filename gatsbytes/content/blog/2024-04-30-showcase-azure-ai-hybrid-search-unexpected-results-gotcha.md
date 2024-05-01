@@ -10,7 +10,7 @@ tags: ["Azure AI Search", "Embeddings", "Search", "tech"]
 
 This document describes a gotcha in Azure AI Search hybrid queries where unexpected results are returned.
 
-The context is of these findings are an ISE engagement with a customer indexing millions of documents in Azure AI Search. During this, I set out to answer questions on filering and matching syntax as well as pre/post-filter performance for hybrid search. Views and opinions are my own.
+The context is of these findings are an ISE engagement with a customer indexing millions of documents in Azure AI Search. During this, I set out to answer questions on filtering and matching syntax as well as pre/post-filter performance for hybrid search. Views and opinions are my own.
 
 ## Key takeaway
 
@@ -108,4 +108,4 @@ Notice how in this case, we *do* get the result back, but the id doesn't match t
 
 **Reasoning**:
 
-Azure AI Hybrid search reranks documents after both the vector search and fulltext search are finished. The `search_text` argument allows for strict (regex) matching, but this matching only applies to the fulltext search. Since we pre-filter on a specific document, vector search will always yield this result (note: this holds even if the neighbour of the embedded query isn't too similar, since we always try to return 10 results - which then must include our single document). After both the vector and text search are executed, the hybrid results includes results which would not be expected from just full-text search.
+Azure AI Hybrid search reranks documents after both the vector search and fulltext search are finished. The `search_text` argument allows for strict (regex) matching, but this matching only applies to the fulltext search. Since we pre-filter on a specific document, vector search will always yield this result (note: this holds even if the neighbor of the embedded query isn't too similar, since we always try to return 10 results - which then must include our single document). After both the vector and text search are executed, the hybrid results include results which would not be expected from just full-text search.
