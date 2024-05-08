@@ -3,11 +3,13 @@ import requests
 from flask import Flask, jsonify
 from flask_cors import CORS
 from chat import chat_blueprint
+from like import like_blueprint
 
 app = Flask(__name__)
 CORS(app)
 
 app.register_blueprint(chat_blueprint)
+app.register_blueprint(like_blueprint)
 
 @app.route('/githubdata', methods=['GET'])
 def get_github_data():

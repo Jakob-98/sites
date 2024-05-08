@@ -2,4 +2,5 @@ flask
 requests
 flask-cors
 gunicorn
+azure-cosmos
 ./wheels/search_project-0.1.0-py3-none-any.whl
