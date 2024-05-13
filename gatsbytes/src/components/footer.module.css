@@ -48,5 +48,6 @@ hr {
 
 .viewButtonContainer {
   position: flex;
+  color: var(--secondary-text-color);
   margin-left: 68%;
 }
