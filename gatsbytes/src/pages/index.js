@@ -4,7 +4,6 @@ import MainLayout from '../layouts/MainLayout'
 import PinnedRepos from '../components/PinnedRepos'
 import LinkWithPreview from "../components/LinkWithPreview"
 import ChatComponent from "../components/Chat"
-import ViewButton from "../components/Views"
 // import ScreenshotCard from '../components/ScreenshotCard';
 import { groupBy } from 'lodash';
 
@@ -99,9 +98,6 @@ const HomePage = ({ data }) => {
               </a>
             </li>
           </ul>
-          <div style={{display: "flex"}}>
-            <ViewButton url={"https://jakobs.dev"} addViewOnMount={true} />
-          </div>
         </div>
         <div className="side-content">
           <h2>Chat with the Jakob-Bot</h2>

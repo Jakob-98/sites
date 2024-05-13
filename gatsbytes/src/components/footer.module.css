@@ -45,3 +45,8 @@ hr {
 .copyright {
     font-size: xx-small;
 }
+
+.viewButtonContainer {
+  position: flex;
+  margin-left: 68%;
+}

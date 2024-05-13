@@ -49,7 +49,6 @@ export default function BlogPost({ data }) {
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{display: 'flex'}}>
         <Link to="/">Back to Home</Link>
-        <ViewButton url={frontmatter.path} addViewOnMount={true} />
         </div>
       </div>
     </MainLayout>
