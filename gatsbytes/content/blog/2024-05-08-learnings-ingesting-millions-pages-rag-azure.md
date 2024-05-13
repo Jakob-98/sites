@@ -16,7 +16,7 @@ The Engagement revolved around an AI Orchestrator as a backend for a copilot for
 
 One of the major pillars of the engagement was the milestone to index ~200k documents within 7 days, while chunking, embedding and enriching the search index items. A final run involving roughly 230k documents (about 8 million chunks) took just over five days to complete given the customer constraints (on a single AKS pod, limited only by a single embeddings deployment).
 
-The list below are subjective. Your mileage may vary.
+The list below is subjective. Your mileage may vary.
 
 ## Ingestion abstracted/high level architecture
 
