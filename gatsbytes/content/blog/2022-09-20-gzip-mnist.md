@@ -73,3 +73,9 @@ for (x1, actual_label) in tqdm(test_set[:100]):
 
 
 **Note:** after writing this post, I found [this article](https://www.blackhc.net/blog/2019/mnist-by-zip/) by Andreas Kirsch taking a similar approach back in 2019.
+
+**Note 2:** Recently emailed by a reader: I ignore the cached compressed values completely. Looking back, I probably missed this when refactoring my notebook into a 'clean' example. Thanks for pointing it out!
+reader's message:
+> you've probably had this pointed out already, but I just realized one thing: both in the "regular" and "obfuscated" versions,
+> you compute a cache of compressed lengths for every entry in your training set, but then proceed to ignore the cached values completely (e.g. for x, _, label in compressed_lengths / for x, _, l in cls).
+> It kinda bugged me so I just wanted to point it out, i.e. it would satisfy my OCD if you got rid of the cache and just straight up use x, l in training_set in the main prediction loop, or somehow feed it into compute_ncd to utilize it :)
