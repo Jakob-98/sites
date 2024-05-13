@@ -56,7 +56,7 @@ The following list is a collection of insights, largely unordered, from the past
 	4. Recently, Document Intelligence added [detailed documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-retrieval-augmented-generation?view=doc-intel-4.0.0) specifically for RAG purposes.
 1. We had various success with various chunkers. Since we have a diverse set of documents, we needed one which works regardless of the incoming documents.
 	1. A custom implementation of Langchain's RecursiveCharacterTextSplitter performed best for us, with a chunk size of 2000 and 200 overlap.
-1. We experimented with adding summaries, key phrase extraction from [Azure AI Language](https://learn.microsoft.com/en-us/azure/ai-services/language-service/) to enrich the search index items. We found this to be rather expensive (it would account for >50% total costs) for no clear added benefit for search results, although we did not ran thorough experiments on this.  
+1. We experimented with adding summaries, key phrase extraction from [Azure AI Language](https://learn.microsoft.com/en-us/azure/ai-services/language-service/) to enrich the search index items. We found this to be rather expensive (it would account for >50% total costs) for no clear added benefit for search results, although we did not run thorough experiments on this.  
 1. Chunks used for embeddings are used for finding relevant documents. Chunked used to answer questions are used for grounding. Their purpose is different, so they could be different sizes - we did not implement this, but I recommend looking into it.
 1. Consider adding extra information on top of chunks prior to embedding to improve the semantic relevance of the chunks.
 
@@ -79,7 +79,7 @@ The following list is a collection of insights, largely unordered, from the past
 		1. An interesting approach found by a data scientist on our team was to cluster chunks in the embedded space, and to ensure that we generate synthetic QA pairs from a sample representing the set of clusters in the embedded space, to ensure our sample represents the various types of possible questions.
 		2. The validity of synthetic QA pairs needs to be verified.
 		3. A rudimentary (dated) approach to generating QA pairs is described in one of my old posts [here](https://jakobs.dev/evaluating-rag-synthetic-dataset-generation/).
-1. Consider: if the variance of the evaluation results is large enough, say to such an extent as to which you are unsure what results entail, it is hard to steer your RAG solution based on these results.
+1. Ensure you know what it means for a metric to change across evaluation runs. Consider what happens if the variance of the evaluation results is too large. This means that it is hard to find a (statistically relevant) relationship between changes made in your RAG pipeline and changes in your evaluation results. Thereby, it becomes hard to steer your RAG solution based on these results.
 1. If the cost (monetary or practical, such as the ability to run the evaluator, or the availability of a quality golden dataset) of running evaluations is high, it decreases the opportunity for developers to make informed decisions when building various parts of the RAG solution.
 
 **Python (library, dev practices, misc)**
