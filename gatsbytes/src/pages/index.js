@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout'
 import PinnedRepos from '../components/PinnedRepos'
 import LinkWithPreview from "../components/LinkWithPreview"
 import ChatComponent from "../components/Chat"
+import ViewButton from "../components/Views"
 // import ScreenshotCard from '../components/ScreenshotCard';
 import { groupBy } from 'lodash';
 
@@ -39,14 +40,14 @@ const HomePage = ({ data }) => {
           <h4>Bytesize & Misc</h4>
           <ul>
             {miscPosts.map(post => (
-              <div key={post.node.id} className="posts">
-                <li>
-                  {post.node.frontmatter.date} - {" "}
-                  <Link to={post.node.frontmatter.path}>
-                    {post.node.frontmatter.title}
-                  </Link>
-                </li>
-              </div>
+                <div key={post.node.id} className="posts" >
+                    <li style={{display:'flex'}}>
+                        {post.node.frontmatter.date} - {" "}
+                        <Link to={post.node.frontmatter.path}>
+                            {post.node.frontmatter.title}
+                        </Link>
+                    </li>
+                </div>
             ))}
           </ul>
           <h2 class="hover-hint">Links</h2>
@@ -98,13 +99,15 @@ const HomePage = ({ data }) => {
               </a>
             </li>
           </ul>
+          <div style={{display: "flex"}}>
+            <ViewButton url={"https://jakobs.dev"} addViewOnMount={true} />
+          </div>
         </div>
         <div className="side-content">
           <h2>Chat with the Jakob-Bot</h2>
           <p>Chat with the custom-built Jakob-AI agent below and get to know about my work and academic experience!</p>
           <ChatComponent />
           <PinnedRepos />
-
         </div>
       </div>
     </MainLayout>
