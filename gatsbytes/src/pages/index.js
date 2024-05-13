@@ -42,9 +42,9 @@ const HomePage = ({ data }) => {
                 <div key={post.node.id} className="posts" >
                     <li style={{display:'flex'}}>
                         {post.node.frontmatter.date} - {" "}
-                        <Link to={post.node.frontmatter.path}>
-                            {post.node.frontmatter.title}
-                        </Link>
+                      <Link to={`${post.node.frontmatter.path}/`}>
+                        {post.node.frontmatter.title}
+                      </Link>
                     </li>
                 </div>
             ))}

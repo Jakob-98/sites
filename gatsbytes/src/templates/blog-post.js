@@ -30,7 +30,7 @@ export default function BlogPost({ data }) {
   return (
     <MainLayout pageTitle={frontmatter.title}>
       <helmet>
-        <link rel="canonical" href={`${siteUrl}${frontmatter.path}`} />
+        <link rel="canonical" href={`${siteUrl}${frontmatter.path}/`} />
       </helmet>
       <SEO
         title={`${frontmatter.title} | ${siteTitle}`}
@@ -38,6 +38,7 @@ export default function BlogPost({ data }) {
         url={siteUrl + frontmatter.path}
         image={frontmatter.image ? frontmatter.image : "default-image-url.jpg"}
         date={frontmatter.date}
+        tags={frontmatter.tags}
       />
       <div className="main-content">
         <h2>{frontmatter.title}</h2>
