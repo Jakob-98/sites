@@ -76,6 +76,7 @@ const HomePage = ({ data }) => {
               <li><a href="https://data.gy" target="_blank">data.gy</a></li>
               <li><a href="https://hi.gy" target="_blank">hi.gy</a></li>
               <li><a href="https://jakobu.com" target="_blank">jakobu.com</a></li>
+              <li><a href="https://jakob.li" target="_blank">jakob.li</a></li>
               <li><a href="https://delft.dev" target="_blank">delft.dev</a></li>
               <li><a href="https://shortlogs.com" target="_blank">shortlogs.com</a></li>
             </ul>
